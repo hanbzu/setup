@@ -7,7 +7,7 @@
 # JDK
 sudo apt-get install openjdk-7-jdk
 
-if [ -d ~/tools/ ]; then
+if [ ! -d ~/tools/ ]; then
 	mkdir ~/tools
 fi
 
