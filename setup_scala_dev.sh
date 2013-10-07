@@ -18,7 +18,7 @@ curl http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scal
 # Get Scala Eclipse IDE from TypeSafe (for Scala version 2.10.2)
 cd ~/tools
 # 32 bit Linux
-curl http://downloads.typesafe.com/scalaide-pack/3.0.1.vfinal-210-20130718/scala-SDK-3.0.1-vfinal-2.10-linux.gtk.x86.tar.gz | tar -xz
+#curl http://downloads.typesafe.com/scalaide-pack/3.0.1.vfinal-210-20130718/scala-SDK-3.0.1-vfinal-2.10-linux.gtk.x86.tar.gz | tar -xz
 # 64 bit Linux
-#curl http://downloads.typesafe.com/scalaide-pack/3.0.1.vfinal-210-20130718/scala-SDK-3.0.1-vfinal-2.10-linux.gtk.x86_64.tar.gz | tar -xz
+curl http://downloads.typesafe.com/scalaide-pack/3.0.1.vfinal-210-20130718/scala-SDK-3.0.1-vfinal-2.10-linux.gtk.x86_64.tar.gz | tar -xz
 
