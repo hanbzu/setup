@@ -30,10 +30,14 @@ sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
 # https://toolbelt.heroku.com/debian
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
+# Use ZSH as the default shell
+sudo apt-get install zsh
+sudo chsh -s $(which zsh)
+
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
     mv dotfiles dotfiles~
 fi
-git clone https://github.com/startup-class/dotfiles.git
+git clone https://github.com/hanbzu/dotfiles.git
 dotfiles/makesymlinks.sh
