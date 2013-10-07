@@ -30,6 +30,12 @@ sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
 # https://toolbelt.heroku.com/debian
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
+# Install RVM for Ruby development
+curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
+
+# Add color to git
+git config --global --add color.ui true
+
 # Use ZSH as the default shell (if you use sudo it won't work)
 sudo apt-get install zsh
 chsh -s $(which zsh)
@@ -41,9 +47,6 @@ if [ -d ./dotfiles/ ]; then
 fi
 git clone https://github.com/hanbzu/dotfiles.git
 dotfiles/makesymlinks.sh
-
-# Add color to git
-git config --global --add color.ui true
 
 # Advice: git configuration
 echo "Don't forget to configure git:"
