@@ -30,9 +30,9 @@ sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
 # https://toolbelt.heroku.com/debian
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-# Use ZSH as the default shell
+# Use ZSH as the default shell (if you use sudo it won't work)
 sudo apt-get install zsh
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh)
 
 # git pull and install dotfiles as well
 cd $HOME
@@ -41,3 +41,12 @@ if [ -d ./dotfiles/ ]; then
 fi
 git clone https://github.com/hanbzu/dotfiles.git
 dotfiles/makesymlinks.sh
+
+# Add color to git
+git config --global --add color.ui true
+
+# Advice: git configuration
+echo "Don't forget to configure git:"
+echo "git config --global user.name \"John Doe\""
+echo "$ git config --global user.email johndoe@example.com"
+echo "More info here: http://git-scm.com/book/en/Customizing-Git-Git-Configuration"
