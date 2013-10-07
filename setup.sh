@@ -33,6 +33,9 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # Install RVM for Ruby development
 curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
 
+# Useful for viewing small directory structures
+sudo apt-get install tree
+
 # Add color to git
 git config --global --add color.ui true
 
