@@ -24,3 +24,13 @@ fi
 cd ~/tools/sml
 curl http://www.smlnj.org/dist/working/110.74/config.tgz | tar -xz
 config/install.sh
+
+# SML mode for emacs
+sudo apt-get install sml-mode
+
+# Racket from repos
+sudo apt-get install racket
+
+# Install RVM for Ruby development
+curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
+
