@@ -13,7 +13,7 @@ if [ ! -d ~/tools/ ]; then
 fi
 
 # SML/NJ requires support for 32 bit executables
-#sudo apt-get install gcc-multilib ia32-libs
+sudo apt-get install gcc-multilib ia32-libs
 
 # SML: Create the ~/tools/sml directory
 if [ ! -d ~/tools/sml ]; then
