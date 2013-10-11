@@ -40,8 +40,11 @@ sudo apt-get install tree
 git config --global --add color.ui true
 
 # Use ZSH as the default shell (if you use sudo it won't work)
-sudo apt-get install zsh
+sudo apt-get install zsh zsh-doc
 chsh -s $(which zsh)
+
+# Inconsolata: Useful font for coding and console
+sudo apt-get install ttf-inconsolata
 
 # git pull and install dotfiles as well
 cd $HOME
