@@ -9,3 +9,9 @@
 sudo add-apt-repository ppa:canonical-hwe-team/sputnik-kernel
 sudo apt-get update
 sudo apt-get upgrade
+
+# We won't be using Thunderbird 
+sudo apt-get remove --purge thunderbird*
+
+# For now, we'll be using Chrome instead of Firefox
+sudo apt-get install google-chrome-stable
