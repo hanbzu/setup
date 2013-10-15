@@ -2,10 +2,7 @@
 # This script will install the Play Framework
 # in the ~/bin/ directory.
 
-if [ ! -d ~/bin/ ]; then
-	mkdir ~/bin
-fi
-
+mkdir -p ~/bin
 cd ~/bin
 
 # I'm using version 2.2.0 -- Change according to times

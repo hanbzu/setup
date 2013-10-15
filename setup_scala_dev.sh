@@ -9,11 +9,8 @@ MACHINE_TYPE=`uname -m`
 # JDK
 sudo apt-get install openjdk-7-jdk
 
-if [ ! -d ~/bin/ ]; then
-	mkdir ~/bin
-fi
-
 # SBT
+mkdir -p ~/bin
 cd ~/bin
 curl http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt/0.12.4/sbt.tgz | tar -xz
 
