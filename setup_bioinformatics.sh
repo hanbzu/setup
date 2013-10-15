@@ -1,10 +1,9 @@
 #!/bin/bash
 # This script installs some bioinformatics tools
-MACHINE_TYPE=`uname -m`
 
-if [ ! -d ~/bin/ ]; then
-	mkdir ~/bin
-fi
+# Preparing...
+MACHINE_TYPE=`uname -m`
+mkdir -p ~/bin
 
 # Pymol: From Ubuntu repositories,
 # not latest version but may be the most stable way
@@ -15,12 +14,7 @@ sudo apt-get install libxmu-dev libglu1-mesa-dev mesa-common-dev libgnomecanvas2
 
 # Coot
 # Buit from source by autobuild scripts
-if [ ! -d ~/bin/coot ]; then
-	mkdir ~/bin/coot
-fi
-if [ ! -d ~/bin/coot/autobuild ]; then
-	mkdir ~/bin/coot/autobuild
-fi
+mkdir -p ~/bin/coot/autobuild
 cd ~/bin/coot/autobuild
 wget http://www.ysbl.york.ac.uk/~emsley/build-logs/build-it-gtk2-simple
 export AUTOBUILD_INSTALLED=~/bin/coot
@@ -35,11 +29,8 @@ bash build-it-gtk2-simple python > build.log
 # Download tarfile and extract to a certain tools folder
 # Then Path will have to be modified so that the system
 # locates the executables from everywhere
-if [ ! -d ~/bin/xds ]; then
-	mkdir ~/bin/xds
-fi
+mkdir -p ~/bin/xds
 cd ~/bin/xds
-cd ~/bin
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
   # 64 bit Linux
   curl ftp://ftp.mpimf-heidelberg.mpg.de/pub/kabsch/XDS-INTEL64_Linux_x86_64.tar.gz | tar -xz
