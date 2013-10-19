@@ -14,7 +14,10 @@ sudo apt-get upgrade -y
 sudo apt-get remove --purge thunderbird*
 
 # For now, we'll be using Chrome instead of Firefox
-sudo apt-get install google-chrome-stable
+cd /tmp
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt-get -f install # Fix errors encountered during install
 
 # Install 'Caffeine' which prevents the OS from suspending while whatching videos
 sudo add-apt-repository -y ppa:caffeine-developers/caffeine-dev
