@@ -20,15 +20,15 @@ then
       echo "deb http://cran.es.r-project.org/bin/linux/ubuntu $CODENAME/" | sudo tee -a /etc/apt/sources.list # For Spain: http://cran.es.r-project.org/
   fi
   echo "Updating sources..."
-  #sudo apt-get update -qq
+  sudo apt-get update -qq
 
   # We install prerrequisites
   sudo apt-get install -y libjpeg62
 
   # We install R now
-  #sudo apt-get install -y r-base
-  #sudo apt-get install -y r-base-dev # In case any R package needs to be built up from source
-  #sudo apt-get install -y r-recommended
+  sudo apt-get install -y r-base
+  sudo apt-get install -y r-base-dev # In case any R package needs to be built up from source
+  sudo apt-get install -y r-recommended
 
   # Then, R studio
   RSTUDIO_FILENAME="$RSTUDIO_VERSION.deb"
