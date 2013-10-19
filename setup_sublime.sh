@@ -12,7 +12,7 @@ sudo mv /opt/Sublime\ Text\ 2 /opt/sublimetext2
 sudo ln -s /opt/sublimetext2/sublime_text /usr/bin/sublime
 
 # Add Ubuntu Unity launcher for Sublime Text
-sudo cp /usr/share/applications/sublime.desktop ~/.local/share/applications/
+cp ~/setup/assets/sublime.desktop ~/.local/share/applications/
 
 # And replace all occurrences of gedit.desktop with sublime.desktop
 sed -i 's/gedit.desktop/sublime.desktop/g' /usr/share/applications/defaults.list

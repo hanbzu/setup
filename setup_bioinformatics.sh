@@ -7,10 +7,10 @@ mkdir -p ~/bin
 
 # Pymol: From Ubuntu repositories,
 # not latest version but may be the most stable way
-sudo apt-get install pymol
+sudo apt-get install -y pymol
 
 # Coot dependencies
-sudo apt-get install libxmu-dev libglu1-mesa-dev mesa-common-dev libgnomecanvas2-dev
+sudo apt-get install -y libxmu-dev libglu1-mesa-dev mesa-common-dev libgnomecanvas2-dev
 
 # Coot
 # Buit from source by autobuild scripts
