@@ -17,9 +17,13 @@ sudo apt-get remove --purge thunderbird*
 cd /tmp
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt-get -f install # Fix errors encountered during install
+# Fix errors encountered during install
+sudo apt-get -f install
 
 # Install 'Caffeine' which prevents the OS from suspending while whatching videos
 sudo add-apt-repository -y ppa:caffeine-developers/caffeine-dev
 sudo apt-get update -qq
 sudo apt-get install -y caffeine
+
+# Disable Ubuntu Dash shopping suggestion scopes
+gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', 'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
