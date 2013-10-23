@@ -6,9 +6,9 @@
 # sure you understand the commands
 # -------------------------------------------
 
-sudo add-apt-repository -y ppa:canonical-hwe-team/sputnik-kernel
-sudo apt-get update -qq
-sudo apt-get upgrade -y
+#sudo add-apt-repository -y ppa:canonical-hwe-team/sputnik-kernel
+#sudo apt-get update -qq
+#sudo apt-get upgrade -y
 
 # We won't be using Thunderbird 
 sudo apt-get remove --purge thunderbird*
