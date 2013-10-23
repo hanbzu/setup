@@ -31,6 +31,11 @@ mkdir -p ~/.sbt/plugins
 touch    ~/.sbt/plugins/plugins.sbt 
 echo "addSbtPlugin(\"org.ensime\" % \"ensime-sbt-cmd\" % \"0.1.2\")" >> ~/.sbt/plugins/plugins.sbt
 
+# Manual installation of Gist plug-in
+cd ~/.config/sublime-text-2/Packages
+git clone git://github.com/condemil/Gist
+echo "DONT FORGET: You should configure your Sublime Text 2 Gist plug-in"
+
 # Manual installation of SublimeREPL
 cd ~/.config/sublime-text-2/Packages
 git clone git@github.com:wuub/SublimeREPL.git SublimeREPL
