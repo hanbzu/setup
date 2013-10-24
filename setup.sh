@@ -49,6 +49,11 @@ sudo apt-get install ttf-inconsolata
 # Easy scheduler for delaying commands
 sudo apt-get install at
 
+# z: Easy go-to app
+mkdir -p ~/bin
+cd ~/bin
+git clone https://github.com/rupa/z.git
+
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
