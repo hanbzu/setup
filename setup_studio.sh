@@ -12,8 +12,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
 
 	# REMOVING PACKAGES WE WONT USE
-	# We will not use Shotwell
-	sudo apt-get remove -y --purge shotwell
+	# We will not use Shotwell -- Maybe it's not safe to remove it
+	#sudo apt-get remove -y --purge shotwell
 
 	# ADDING REPOSITORIES
 	# Darktable

@@ -17,8 +17,8 @@ CODENAME=`lsb_release --codename | cut -f2`
 # Ubuntu restricted extras. For video playing -- Not sure about this
 #sudo apt-get install ubuntu-restricted-extras
 
-# We won't be using Thunderbird 
-sudo apt-get remove --purge thunderbird*
+# We won't be using Thunderbird -- Maybe it's not safe to remove it
+#sudo apt-get remove --purge thunderbird*
 
 # For now, we'll be using Chrome instead of Firefox
 cd /tmp
