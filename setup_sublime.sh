@@ -44,6 +44,11 @@ git clone git@github.com:wuub/SublimeREPL.git SublimeREPL
 cd ~/.config/sublime-text-2/Packages
 git clone https://github.com/seanjames777/SML-Language-Definition.git "SML (Standard ML)"
 
+# Configure SML to be usable in Sublime Text
+mkdir -p ~/.config/sublime-text-2/Packages/SML
+mv ~/setup/assets/sml_Default.sublime-commands ~/.config/sublime-text-2/Packages/SML/Default.sublime-commands
+mv ~/setup/assets/sml_Main.sublime-menu ~/.config/sublime-text-2/Packages/SML/Main.sublime-menu
+
 # A tweak in order to have a SML REPL in Sublime
 cd ~/.config/sublime-text-2/Packages/User/
 USER_NAME=`whoami`
@@ -68,3 +73,7 @@ curl https://raw.github.com/n8han/conscript/master/setup.sh | sh # Installs into
 
 # Using Conscript, install giter8
 ~/bin/cs n8han/giter8
+
+# Some notes
+echo "You may be interested in installing these Sublime Text packages through Package Manager:"
+echo " * MarkdownEditing"
