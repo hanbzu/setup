@@ -12,18 +12,8 @@ sudo apt-get install -y pymol
 # Coot dependencies
 sudo apt-get install -y libxmu-dev libglu1-mesa-dev mesa-common-dev libgnomecanvas2-dev
 
-# Coot
-# Buit from source by autobuild scripts
-mkdir -p ~/bin/coot/autobuild
-cd ~/bin/coot/autobuild
-wget http://www.ysbl.york.ac.uk/~emsley/build-logs/build-it-gtk2-simple
-export AUTOBUILD_INSTALLED=~/bin/coot
-export AUTOBUILD_BUILD=~/bin/coot/autobuild/
-export LOGS=$AUTOBUILD_BUILD/logs
-export NIGHTLY_DEST_DIR=$AUTOBUILD_BUILD
-export STABLE_DEST_DIR=$AUTOBUILD_BUILD
-export build_coot_prerelease=1
-bash build-it-gtk2-simple python > build.log
+# Coot installer script -- We run it with bash
+bash ~/setup/setup_coot.sh
 
 # XDS
 # Download tarfile and extract to a certain tools folder
