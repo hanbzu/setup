@@ -19,7 +19,7 @@ then
 	# Darktable
 	sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release-plus
 	# Gimp
-	sudo add-apt-repository ppa:otto-kesselgulasch/gimp
+	sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 	# Openshot
 	sudo add-apt-repository -y ppa:openshot.developers/ppa
 	# Qgifer
