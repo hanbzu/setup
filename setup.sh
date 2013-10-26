@@ -43,8 +43,6 @@ git config --global --add color.ui true
 sudo apt-get install zsh zsh-doc
 chsh -s $(which zsh)
 
-# Inconsolata: Useful font for coding and console
-sudo apt-get install ttf-inconsolata
 
 # Easy scheduler for delaying commands
 sudo apt-get install at
