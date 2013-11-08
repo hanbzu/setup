@@ -6,7 +6,7 @@ Clone and run this on an Ubuntu [virtual] machine to configure both the machine 
 cd ~
 sudo apt-get install -y git-core
 git clone https://github.com/hanbzu/setup.git
-./setup/setup.sh   
+setup/setup.sh   
 ```
 
 Based on the guidelines in
