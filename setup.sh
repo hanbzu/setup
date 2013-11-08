@@ -43,7 +43,6 @@ git config --global --add color.ui true
 sudo apt-get install zsh zsh-doc
 chsh -s $(which zsh)
 
-
 # Easy scheduler for delaying commands
 sudo apt-get install at
 
