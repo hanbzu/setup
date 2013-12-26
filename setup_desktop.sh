@@ -53,3 +53,7 @@ sudo apt-get install -y fslint
 
 # Inconsolata: Useful font for coding and console
 sudo apt-get install -y ttf-inconsolata
+
+# Gimp. I consider this now quite basic.
+sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
+sudo apt-get install -y gimp gimp-plugin-registry gimp-gmic

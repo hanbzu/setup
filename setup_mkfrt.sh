@@ -7,6 +7,8 @@
 # THIS IS VALID ONLY FOR LUBUNTU SAUCY (_L_UBUNTU)
 # --------------------------------------------
 
+MACHINE_TYPE=`uname -m`
+
 # Color messages
 MSGCOL="\033[37;44m"
 ENDCOL="\033[0m"
@@ -25,18 +27,39 @@ sudo apt-get upgrade -y
 # Removing unnecessary packages from this Lubuntu distribution
 # << lubuntu-desktop is just a metapackage that install all lubuntu-related packages in a single step >>
 # http://askubuntu.com/questions/317464/can-i-safely-remove-lubuntu-desktop
-echo -e "$MSGCOL Removing unnecessary packages from Lubuntu $ENDCOL"
-sudo apt-get remove -y lubuntu-desktop
-sudo apt-get purge -y ace-of-penguins abiword gnumeric
+#echo -e "$MSGCOL Removing unnecessary packages from Lubuntu $ENDCOL"
+#sudo apt-get remove -y lubuntu-desktop
+#sudo apt-get purge -y ace-of-penguins abiword gnumeric
 
 # LibreOffice 4.1 (only that version in PPA)
 # << It should be noted that this ppa will only produce updates for the 4.1 series >>
 # http://askubuntu.com/questions/252612/how-do-i-install-libreoffice-4
-echo -e "$MSGCOL Installing LibreOffice 4.1 (PPA) $ENDCOL"
-sudo add-apt-repository -y ppa:libreoffice/libreoffice-4-1
-sudo apt-get update -qq
-sudo apt-get install -y libreoffice
+#echo -e "$MSGCOL Installing LibreOffice 4.1 (PPA) $ENDCOL"
+#sudo add-apt-repository -y ppa:libreoffice/libreoffice-4-1
+#sudo apt-get update -qq
+#sudo apt-get install -y libreoffice
 
 # Synapse is a fast app launcher
 echo -e "$MSGCOL Installing Synapse $ENDCOL"
 sudo apt-get install -y synapse
+
+# RAW image support
+echo -e "$MSGCOL Installing support for RAW images $ENDCOL"
+sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
+
+# Dropbox
+# www.dropbox.com/install
+echo -e "$MSGCOL Installing Dropbox 1.6.0 with DEB package $ENDCOL"
+cd /tmp
+if [ ${MACHINE_TYPE} == 'x86_64' ]; then
+  # 64 bit Linux
+  DROPBOX_FILE=dropbox_1.6.0_amd64.deb
+else
+  # 32 bit Linux
+  DROPBOX_FILE=dropbox_1.6.0_i386.deb
+fi
+wget https://www.dropbox.com/download?dl=packages/ubuntu/$DROPBOX_FILE
+sudo dpkg -i $DROPBOX_FILE
+# Fix errors encountered during install
+#sudo apt-get -f -y install
+rm /tmp/$DROPBOX_FILE

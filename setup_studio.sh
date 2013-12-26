@@ -48,5 +48,5 @@ then
 	# Qgifer: gifs out of videos
 	sudo apt-get install -y qgifer
 	# Blender
-	sudo apt-get install blender
+	sudo apt-get install -y blender
 fi
