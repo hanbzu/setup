@@ -9,6 +9,8 @@
 # Basic for automatic installs
 sudo apt-get install -y git
 sudo apt-get install -y curl
+sudo apt-get update -qq
+sudo apt-get upgrade -y
 
 # Desktop apps
 source setup_desktop.sh

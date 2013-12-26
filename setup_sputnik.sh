@@ -9,6 +9,8 @@
 # Basic for automatic installs
 sudo apt-get install -y git
 sudo apt-get install -y curl
+sudo apt-get update -qq
+sudo apt-get upgrade -y
 
 # The Sputnik repository is apparently no longer needed since 13.10
 #sudo add-apt-repository -y ppa:canonical-hwe-team/sputnik-kernel
