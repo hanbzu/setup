@@ -52,4 +52,4 @@ sudo apt-get install -y filezilla
 sudo apt-get install -y fslint
 
 # Inconsolata: Useful font for coding and console
-sudo apt-get install ttf-inconsolata
+sudo apt-get install -y ttf-inconsolata
