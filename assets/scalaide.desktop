@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ScalaIDE
+Comment=ScalaIDE for Eclipse Kepler
+Icon=/opt/scalaide/icon.png
+Exec=env UBUNTU_MENUPROXY= scalaide
+Terminal=false
+Categories=Development;IDE;Java;

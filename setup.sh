@@ -33,14 +33,17 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # Install RVM for Ruby development
 curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
 
+# Install PIP
+sudo apt-get install -y python-pip
+
 # Useful for viewing small directory structures
-sudo apt-get install tree
+sudo apt-get install -y tree
 
 # Add color to git
 git config --global --add color.ui true
 
 # Use ZSH as the default shell (if you use sudo it won't work)
-sudo apt-get install zsh zsh-doc
+sudo apt-get install -y zsh zsh-doc
 chsh -s $(which zsh)
 
 # Easy scheduler for delaying commands
