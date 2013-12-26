@@ -36,4 +36,4 @@ sudo apt-get install -y myspell-es
 sudo apt-get install -y hunspell-fr mythes-fr hyphen-fr wfrench
 
 # Desktop apps
-source setup_desktop.sh
+source ~/setup/setup_desktop.sh

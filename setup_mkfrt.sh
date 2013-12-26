@@ -13,4 +13,4 @@ sudo apt-get update -qq
 sudo apt-get upgrade -y
 
 # Desktop apps
-source setup_desktop.sh
+source ~/setup/setup_desktop.sh
