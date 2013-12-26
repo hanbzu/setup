@@ -42,24 +42,22 @@ sudo apt-get upgrade -y
 # Synapse is a fast app launcher
 echo -e "$MSGCOL Installing Synapse $ENDCOL"
 sudo apt-get install -y synapse
+echo "synapse --startup" >> ~/.config/lxsession/Lubuntu/autostart
 
 # RAW image support
 echo -e "$MSGCOL Installing support for RAW images $ENDCOL"
 sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
 
 # Dropbox
-# www.dropbox.com/install
-echo -e "$MSGCOL Installing Dropbox 1.6.0 with DEB package $ENDCOL"
-cd /tmp
-if [ ${MACHINE_TYPE} == 'x86_64' ]; then
-  # 64 bit Linux
-  DROPBOX_FILE=dropbox_1.6.0_amd64.deb
-else
-  # 32 bit Linux
-  DROPBOX_FILE=dropbox_1.6.0_i386.deb
-fi
-wget https://www.dropbox.com/download?dl=packages/ubuntu/$DROPBOX_FILE
-sudo dpkg -i $DROPBOX_FILE
-# Fix errors encountered during install
-#sudo apt-get -f -y install
-rm /tmp/$DROPBOX_FILE
+echo -e "$MSGCOL Installing dropbox $ENDCOL"
+source ~/setup/setup_dropbox.sh
+echo "dropbox start -i" >> ~/.config/lxsession/Lubuntu/autostart
+
+# Autostart
+# IMPORTANT: This is managed under Lubuntu Saucy
+# It can be tweaked from 'Default applications for LXSession'
+# But the best way is to run scripts from ~/.config/lxsession/Lubuntu/autostart
+# Make sure each of the apps do this
+# Another way, _NOT RECOMMENDED_, would be:
+#cp  ~/.config/lxsession/Lubuntu/desktop.conf  ~/.config/lxsession/Lubuntu/desktop.conf.bak
+#sed -i ‘s/disable_autostart=config-only/disable_autostart=no/g’ ~/.config/lxsession/Lubuntu/desktop.conf

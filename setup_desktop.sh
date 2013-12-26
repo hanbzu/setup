@@ -10,6 +10,7 @@ CODENAME=`lsb_release --codename | cut -f2`
 MACHINE_TYPE=`uname -m`
 
 # Skype. We need to add Canonical partner repositories
+echo -e "$MSGCOL APP: Skype $ENDCOL"
 sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ $CODENAME partner' >> /etc/apt/sources.list.d/canonical_partner.list"
 sudo apt-get update -qq
 sudo apt-get install -y skype
@@ -17,6 +18,7 @@ sudo apt-get install -y skype
 # http://linuxg.net/how-to-fix-the-skype-sound-issue-on-ubuntu-13-10-saucy-salamander/
 
 # Virtualbox
+echo -e "$MSGCOL APP: VirtualBox $ENDCOL"
 sudo apt-get install -y dkms
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 CODENAME=`lsb_release --codename | cut -f2` # Ubuntu codename
@@ -25,6 +27,7 @@ sudo apt-get update -qq
 sudo apt-get install -y virtualbox-4.3
 
 # For now, we'll be using Chrome instead of Firefox
+echo -e "$MSGCOL APP: Chrome $ENDCOL"
 sudo apt-get install -y libxss1
 cd /tmp
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
@@ -41,19 +44,32 @@ sudo apt-get -f -y install
 rm /tmp/$CHROME_FILE
 
 # Install 'Caffeine' which prevents the OS from suspending while watching videos
-sudo add-apt-repository -y ppa:caffeine-developers/caffeine-dev
-sudo apt-get update -qq
-sudo apt-get install -y caffeine
+echo -e "$MSGCOL APP: Caffeine $ENDCOL"
+# Saucy repo not working
+#sudo add-apt-repository -y ppa:caffeine-developers/caffeine-dev
+#sudo apt-get update -qq
+#sudo apt-get install -y caffeine
+cd /tmp
+wget -c https://launchpad.net/caffeine/2.4/2.4.1/+download/caffeine_2.4.1%2B419%7Eoneiric1_all.deb -O caffeine.deb
+sudo dpkg -i /tmp/caffeine.deb
+sudo apt-get install -f
+rm /tmp/caffeine.deb
 
 # Filezilla is useful for non automated FTP connections
+echo -e "$MSGCOL APP: Filezilla $ENDCOL"
 sudo apt-get install -y filezilla
 
 # Useful to manage local files and do cleanups
+echo -e "$MSGCOL APP: FSlint $ENDCOL"
 sudo apt-get install -y fslint
 
-# Inconsolata: Useful font for coding and console
-sudo apt-get install -y ttf-inconsolata
-
 # Gimp. I consider this now quite basic.
+echo -e "$MSGCOL APP: Gimp $ENDCOL"
 sudo add-apt-repository -y ppa:otto-kesselgulasch/gimp
 sudo apt-get install -y gimp gimp-plugin-registry gimp-gmic
+
+# Inconsolata: Useful font for coding and console
+echo -e "$MSGCOL Inconsolata font $ENDCOL"
+sudo apt-get install -y ttf-inconsolata
+
+echo -e "$MSGCOL --> Desktop apps, done. $ENDCOL"
