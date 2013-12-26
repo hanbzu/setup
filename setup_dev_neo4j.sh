@@ -9,4 +9,5 @@ sudo apt-get update
 # Install Neo4j, community edition
 sudo apt-get install -y neo4j
 # start neo4j server, available at http://localhost:7474 of the target machine
-neo4j start
+# I don't have to start it right now
+#neo4j start

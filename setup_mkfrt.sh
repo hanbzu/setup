@@ -40,18 +40,18 @@ sudo apt-get update -qq
 sudo apt-get install -y libreoffice
 
 # Synapse is a fast app launcher
-#echo -e "$MSGCOL Installing Synapse $ENDCOL"
-#sudo apt-get install -y synapse
-#echo "synapse --startup" >> ~/.config/lxsession/Lubuntu/autostart
+echo -e "$MSGCOL Installing Synapse $ENDCOL"
+sudo apt-get install -y synapse
+echo "synapse --startup" >> ~/.config/lxsession/Lubuntu/autostart
 
 # RAW image support
-#echo -e "$MSGCOL Installing support for RAW images $ENDCOL"
-#sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
+echo -e "$MSGCOL Installing support for RAW images $ENDCOL"
+sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
 
 # Dropbox
-#echo -e "$MSGCOL Installing dropbox $ENDCOL"
-#source ~/setup/setup_dropbox.sh
-#echo "dropbox start -i" >> ~/.config/lxsession/Lubuntu/autostart
+echo -e "$MSGCOL Installing dropbox $ENDCOL"
+source ~/setup/setup_dropbox.sh
+echo "dropbox start -i" >> ~/.config/lxsession/Lubuntu/autostart
 
 # Autostart
 # IMPORTANT: This is managed under Lubuntu Saucy
@@ -61,3 +61,9 @@ sudo apt-get install -y libreoffice
 # Another way, _NOT RECOMMENDED_, would be:
 #cp  ~/.config/lxsession/Lubuntu/desktop.conf  ~/.config/lxsession/Lubuntu/desktop.conf.bak
 #sed -i ‘s/disable_autostart=config-only/disable_autostart=no/g’ ~/.config/lxsession/Lubuntu/desktop.conf
+
+# Add Caffeine to autostart
+
+# Enable laptop mode
+cp  ~/.config/lxsession/Lubuntu/desktop.conf  ~/.config/lxsession/Lubuntu/desktop.conf.bak
+sed -i ‘s/laptop_mode=no/laptop_mode=yes/g’ ~/.config/lxsession/Lubuntu/desktop.conf

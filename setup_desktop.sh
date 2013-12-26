@@ -52,7 +52,7 @@ echo -e "$MSGCOL APP: Caffeine $ENDCOL"
 cd /tmp
 wget -c https://launchpad.net/caffeine/2.4/2.4.1/+download/caffeine_2.4.1%2B419%7Eoneiric1_all.deb -O caffeine.deb
 sudo dpkg -i /tmp/caffeine.deb
-sudo apt-get install -f
+sudo apt-get install -f -y
 rm /tmp/caffeine.deb
 
 # Filezilla is useful for non automated FTP connections

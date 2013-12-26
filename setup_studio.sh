@@ -5,12 +5,12 @@
 # CAUTION: In case you use this script make
 # sure you understand the commands
 # -------------------------------------------
-echo "We're going to remove Shotwell, and then install Darktable, Gimp, Inkscape, Openshot, Qgifer and Blender."
+echo "We're going to remove Shotwell, and then install"
+echo "Darktable, Gimp, Inkscape, Openshot, Qgifer, Blender and Ufraw."
 read -p "Are you sure? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-
 	# REMOVING PACKAGES WE WONT USE
 	# We will not use Shotwell
 	sudo apt-get remove -y --purge shotwell
@@ -28,8 +28,6 @@ then
 	sudo add-apt-repository -y ppa:inkscape.dev/stable
 	# ...and now update
 	sudo apt-get -qq update
-
-
 
   # Screencasting applications
   sudo apt-get install recordmydesktop
@@ -49,4 +47,6 @@ then
 	sudo apt-get install -y qgifer
 	# Blender
 	sudo apt-get install -y blender
+	# RAW image support
+	sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
 fi

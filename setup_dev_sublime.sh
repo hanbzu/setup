@@ -68,8 +68,9 @@ tar zxvf ensime_2.10.0-0.9.8.9.tar.gz
 mv ensime_2.10.0-0.9.8.9 server
 
 # Install Conscript
+# Conscript installs into ~/bin
 mkdir -p ~/bin
-curl https://raw.github.com/n8han/conscript/master/setup.sh | sh # Installs into ~/bin
+curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
 
 # Using Conscript, install giter8
 ~/bin/cs n8han/giter8
