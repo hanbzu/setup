@@ -23,7 +23,7 @@ then
 	# Openshot
 	# IMPORTANT !!!!!
 	# This PPA is sometimes giving problems
-	sudo add-apt-repository -y ppa:openshot.developers/ppa
+	#sudo add-apt-repository -y ppa:openshot.developers/ppa
 	# Qgifer
 	sudo add-apt-repository -y ppa:samrog131/ppa
 	# Inkscape

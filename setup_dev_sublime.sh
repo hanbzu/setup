@@ -15,7 +15,7 @@ sudo ln -s /opt/sublimetext2/sublime_text /usr/local/bin/sublime
 cp ~/setup/assets/sublime.desktop ~/.local/share/applications/
 
 # And replace all occurrences of gedit.desktop with sublime.desktop
-sed -i 's/gedit.desktop/sublime.desktop/g' /usr/share/applications/defaults.list
+sudo sed -i 's/gedit.desktop/sublime.desktop/g' /usr/share/applications/defaults.list
 
 # Make sure customisation directories are there
 mkdir -p ~/.config/sublime-text-2/Installed\ Packages
