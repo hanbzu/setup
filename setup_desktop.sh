@@ -9,6 +9,10 @@
 CODENAME=`lsb_release --codename | cut -f2`
 MACHINE_TYPE=`uname -m`
 
+# Color messages
+MSGCOL="\033[37;44m"
+ENDCOL="\033[0m"
+
 # Skype. We need to add Canonical partner repositories
 echo -e "$MSGCOL APP: Skype $ENDCOL"
 sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ $CODENAME partner' >> /etc/apt/sources.list.d/canonical_partner.list"
@@ -38,7 +42,7 @@ else
   CHROME_FILE=google-chrome-stable_current_i386.deb
 fi
 wget https://dl.google.com/linux/direct/$CHROME_FILE
-sudo dpkg -i $CHROME_FILE
+sudo dpkg -i -y $CHROME_FILE
 # Fix errors encountered during install
 sudo apt-get -f -y install
 rm /tmp/$CHROME_FILE

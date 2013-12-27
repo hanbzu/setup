@@ -39,17 +39,15 @@ sudo apt-get glmark2
 #sudo apt-get install -y myspell-es
 #sudo apt-get install -y hunspell-fr mythes-fr hyphen-fr wfrench
 
-# Desktop apps
-echo -e "$MSGCOL Desktop apps $ENDCOL"
-source ~/setup/setup_desktop.sh
-
 # Dropbox
 echo -e "$MSGCOL Installing dropbox $ENDCOL"
 source ~/setup/setup_dropbox.sh
 
-# Tilemill
+# Desktop apps
+echo -e "$MSGCOL Desktop apps $ENDCOL"
+source ~/setup/setup_desktop.sh
 
-# Studio
+# Studio apps
 echo -e "$MSGCOL Sputnik studio! $ENDCOL"
 source ~/setup/setup_studio.sh
 
@@ -75,6 +73,11 @@ source ~/setup/setup_dev_sublime.sh
 # https://toolbelt.heroku.com/debian
 echo -e "$MSGCOL Heroku toolbelt $ENDCOL"
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# GIS apps
+# I install it 'once the war is over', because TileMill is a Node.js app
+echo -e "$MSGCOL GIS $ENDCOL"
+source ~/setup/setup_gis.sh
 
 # CLI improvements
 echo -e "$MSGCOL Command line improvements $ENDCOL"
