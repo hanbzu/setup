@@ -44,12 +44,13 @@ chmod +x scala.sh
 sudo ln -s ~/bin/scala_workaround/scala.sh /usr/local/bin/scala
 
 # Play Framework
-# I'm using version 2.2.0 -- Change according to times
+# I'm using version 2.2.1 -- Change according to times
 # Running play writes some files to directories within the archive,
 # so don’t install to /opt, /usr/local or anywhere else you’d need special permission to write to.)
 mkdir -p ~/bin
 cd ~/bin
-curl http://downloads.typesafe.com/play/2.2.0/play-2.2.0.zip -o tmp.zip
+PLAY_VERSION=2.2.1
+curl http://downloads.typesafe.com/play/$PLAY_VERSION/play-$PLAY_VERSION.zip -o tmp.zip
 unzip tmp.zip
 rm tmp.zip
-sudo ln -s ~/bin/play-2.2.0/play /usr/local/bin/play
+sudo ln -s ~/bin/play-$PLAY_VERSION/play /usr/local/bin/play
