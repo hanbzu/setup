@@ -36,7 +36,7 @@ sudo ln -s /opt/scalaide/eclipse/eclipse /usr/local/bin/scalaide
 sudo cp ~/setup/assets/scalaide.desktop /usr/share/applications/
 
 # Temporary workaround for Scala REPL
-sudo mkdir -p ~/bin/scala_workaround
+mkdir -p ~/bin/scala_workaround
 cd ~/bin/scala_workaround
 echo "#\!/bin/bash" >> scala.sh
 echo "sbt console" >> scala.sh
