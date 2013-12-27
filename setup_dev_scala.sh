@@ -33,18 +33,20 @@ sudo ln -s /opt/scalaide/eclipse/eclipse /usr/local/bin/scalaide
 sudo cp ~/setup/assets/scalaide.desktop /usr/share/applications/
 
 # Temporary workaround for Scala REPL
-sudo mkdir -p /opt/scala_workaround
-cd /opt/scala_workaround
-sudo echo "#\!/bin/bash" >> scala.sh
-sudo echo "sbt console" >> scala.sh
-sudo chmod +x scala.sh
-sudo ln -s /opt/scala_workaround/scala.sh /usr/local/bin/scala
+sudo mkdir -p ~/bin/scala_workaround
+cd ~/bin//scala_workaround
+echo "#\!/bin/bash" >> scala.sh
+echo "sbt console" >> scala.sh
+chmod +x scala.sh
+sudo ln -s ~/bin/scala_workaround/scala.sh /usr/local/bin/scala
 
 # Play Framework
 # I'm using version 2.2.0 -- Change according to times
-sudo mkdir -p /opt
-cd /opt
-sudo curl http://downloads.typesafe.com/play/2.2.0/play-2.2.0.zip -o tmp.zip
-sudo unzip tmp.zip
-sudo rm tmp.zip
-sudo ln -s /opt/play-2.2.0/play /usr/local/bin/play
+# Running play writes some files to directories within the archive,
+# so don’t install to /opt, /usr/local or anywhere else you’d need special permission to write to.)
+mkdir -p ~/bin
+cd ~/bin
+curl http://downloads.typesafe.com/play/2.2.0/play-2.2.0.zip -o tmp.zip
+unzip tmp.zip
+rm tmp.zip
+sudo ln -s ~/bin/play-2.2.0/play /usr/local/bin/play

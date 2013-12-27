@@ -14,3 +14,4 @@ echo -e "$MSGCOL TileMill $ENDCOL"
 cd /opt
 curl http://tilemill.s3.amazonaws.com/latest/install-tilemill.tar.gz | sudo tar -xz
 sudo ./install-tilemill.sh
+sudo rm install-tilemill.sh
