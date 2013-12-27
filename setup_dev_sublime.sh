@@ -9,7 +9,7 @@ sudo curl http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2%20x64.tar.bz
 sudo mv /opt/Sublime\ Text\ 2 /opt/sublimetext2
 
 # Add link into /usr/bin
-sudo ln -s /opt/sublimetext2/sublime_text /usr/bin/sublime
+sudo ln -s /opt/sublimetext2/sublime_text /usr/local/bin/sublime
 
 # Add Ubuntu Unity launcher for Sublime Text
 cp ~/setup/assets/sublime.desktop ~/.local/share/applications/
