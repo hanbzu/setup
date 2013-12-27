@@ -4,6 +4,9 @@
 # principles in Scala' by the École Polytechnique Fédérale de Lausanne
 # (with professor Martin Odersky)
 
+# Prerrequisite
+sudo apt-get install -y curl
+
 # JDK
 sudo apt-get install -y openjdk-7-jdk
 
@@ -34,7 +37,7 @@ sudo cp ~/setup/assets/scalaide.desktop /usr/share/applications/
 
 # Temporary workaround for Scala REPL
 sudo mkdir -p ~/bin/scala_workaround
-cd ~/bin//scala_workaround
+cd ~/bin/scala_workaround
 echo "#\!/bin/bash" >> scala.sh
 echo "sbt console" >> scala.sh
 chmod +x scala.sh
