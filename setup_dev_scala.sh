@@ -54,3 +54,12 @@ curl http://downloads.typesafe.com/play/$PLAY_VERSION/play-$PLAY_VERSION.zip -o 
 unzip tmp.zip
 rm tmp.zip
 sudo ln -s ~/bin/play-$PLAY_VERSION/play /usr/local/bin/play
+
+# Typesafe activator
+mkdir -p ~/bin
+cd ~/bin
+ACTIVATOR_VERSION=1.0.10
+curl http://downloads.typesafe.com/typesafe-activator/1.0.10/typesafe-activator-$ACTIVATOR_VERSION.zip -o tmp.zip
+unzip tmp.zip
+rm tmp.zip
+sudo ln -s ~/bin/activator-$ACTIVATOR_VERSION/activator /usr/local/bin/activator
