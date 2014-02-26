@@ -56,6 +56,8 @@ echo -e "$MSGCOL PROGRAMMING. Python. $ENDCOL"
 sudo apt-get install -y python-pip python-dev
 
 # Programming, additional capabilities
+echo -e "$MSGCOL PROGRAMMING. HTML5 development. $ENDCOL"
+source ~/setup/setup_dev_html5.sh
 echo -e "$MSGCOL PROGRAMMING. Node.js development. $ENDCOL"
 source ~/setup/setup_dev_node.sh
 echo -e "$MSGCOL PROGRAMMING. Programming Languages set (SML, Racket, Ruby). $ENDCOL"
