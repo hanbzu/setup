@@ -8,6 +8,14 @@
 MSGCOL="\033[37;44m"
 ENDCOL="\033[0m"
 
+# QGIS
+echo -e "$MSGCOL QGIS $ENDCOL"
+CODENAME=`lsb_release --codename | cut -f2` # Ubuntu codename
+echo "deb     http://qgis.org/debian $CODENAME main" | sudo tee -a /etc/apt/sources.list
+echo "deb-src http://qgis.org/debian $CODENAME main" | sudo tee -a /etc/apt/sources.list
+sudo apt-get update -qq
+sudo apt-get install qgis python-qgis qgis-plugin-grass -y --force-yes
+
 # Tilemill
 # Apparently it automatically installs it and it can be run with the Ubuntu launcher
 echo -e "$MSGCOL TileMill $ENDCOL"
@@ -15,3 +23,4 @@ cd /opt
 curl http://tilemill.s3.amazonaws.com/latest/install-tilemill.tar.gz | sudo tar -xz
 sudo ./install-tilemill.sh
 sudo rm install-tilemill.sh
+
