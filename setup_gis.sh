@@ -16,6 +16,9 @@ echo "deb-src http://qgis.org/debian $CODENAME main" | sudo tee -a /etc/apt/sour
 sudo apt-get update -qq
 sudo apt-get install qgis python-qgis qgis-plugin-grass -y --force-yes
 
+# GDAL
+sudo apt-get install gdal-bin -y
+
 # Tilemill
 # Apparently it automatically installs it and it can be run with the Ubuntu launcher
 echo -e "$MSGCOL TileMill $ENDCOL"
