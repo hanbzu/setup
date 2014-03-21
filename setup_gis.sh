@@ -27,3 +27,5 @@ curl http://tilemill.s3.amazonaws.com/latest/install-tilemill.tar.gz | sudo tar 
 sudo ./install-tilemill.sh
 sudo rm install-tilemill.sh
 
+# TOPOJSON
+npm install -g topojson
