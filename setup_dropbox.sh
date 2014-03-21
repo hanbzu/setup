@@ -4,20 +4,13 @@
 # sure you understand the commands
 # --------------------------------------------
 
-# www.dropbox.com/install
-echo -e "$MSGCOL Installing Dropbox 1.6.0 with DEB package $ENDCOL"
-sudo apt-get install python-gpgme
-cd /tmp
-if [ ${MACHINE_TYPE} == 'x86_64' ]; then
-  # 64 bit Linux
-  DROPBOX_FILE=dropbox_1.6.0_amd64.deb
-else
-  # 32 bit Linux
-  DROPBOX_FILE=dropbox_1.6.0_i386.deb
-fi
-wget https://www.dropbox.com/download?dl=packages/ubuntu/$DROPBOX_FILE -O /tmp/dropbox.deb
-sudo dpkg -i /tmp/dropbox.deb
-# Fix errors encountered during install
-echo "Be careful, last time there was a problem resulting in a damaged system."
-sudo apt-get -f install
-rm /tmp/dropbox.deb
+CODENAME=`lsb_release --codename | cut -f2`
+
+echo "deb http://linux.dropbox.com/ubuntu $CODENAME main">>'dropbox.list'
+chmod 644 'dropbox.list'
+sudo chown root:root 'dropbox.list'
+sudo mv 'dropbox.list' '/etc/apt/sources.list.d/dropbox.list'
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5044912E
+sudo apt-get update -qq
+sudo apt-get install dropbox -y
+
