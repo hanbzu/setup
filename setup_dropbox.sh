@@ -18,5 +18,6 @@ fi
 wget https://www.dropbox.com/download?dl=packages/ubuntu/$DROPBOX_FILE -O /tmp/dropbox.deb
 sudo dpkg -i /tmp/dropbox.deb
 # Fix errors encountered during install
-sudo apt-get -f -y install
+echo "Be careful, last time there was a problem resulting in a damaged system."
+sudo apt-get -f install
 rm /tmp/dropbox.deb
