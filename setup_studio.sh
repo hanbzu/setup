@@ -28,6 +28,8 @@ then
 	sudo add-apt-repository -y ppa:samrog131/ppa
 	# Inkscape
 	sudo add-apt-repository -y ppa:inkscape.dev/stable
+	# SimpleScreenRecorder
+	sudo add-apt-repository -y ppa:maarten-baert/simplescreenrecorder
 	# ...and now update
 	sudo apt-get -qq update
 
@@ -51,4 +53,7 @@ then
 	sudo apt-get install -y blender
 	# RAW image support
 	sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
+	# Simple screen recorder
+  sudo apt-get install simplescreenrecorder
+
 fi
