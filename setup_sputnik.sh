@@ -56,6 +56,11 @@ echo -e "$MSGCOL PROGRAMMING. Python. $ENDCOL"
 sudo apt-get install -y python-pip python-dev
 
 # Programming, additional capabilities
+echo -e "$MSGCOL PROGRAMMING. Git environment. $ENDCOL"
+sudo apt-get install -y meld
+git config --global diff.tool meld
+git config --global --add difftool.prompt false
+git config --global --add color.ui true
 echo -e "$MSGCOL PROGRAMMING. HTML5 development. $ENDCOL"
 source ~/setup/setup_dev_html5.sh
 echo -e "$MSGCOL PROGRAMMING. Node.js development. $ENDCOL"
@@ -85,8 +90,6 @@ source ~/setup/setup_gis.sh
 echo -e "$MSGCOL Command line improvements $ENDCOL"
 # Useful for viewing small directory structures
 sudo apt-get install -y tree
-# Add color to git
-git config --global --add color.ui true
 # Easy scheduler for delaying commands
 sudo apt-get install at
 # z: Easy go-to app
