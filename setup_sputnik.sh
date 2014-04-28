@@ -39,6 +39,9 @@ sudo apt-get glmark2
 #sudo apt-get install -y myspell-es
 #sudo apt-get install -y hunspell-fr mythes-fr hyphen-fr wfrench
 
+# SMB networking
+sudo apt-get install -y samba
+
 # Dropbox
 echo -e "$MSGCOL Installing dropbox $ENDCOL"
 source ~/setup/setup_dropbox.sh
