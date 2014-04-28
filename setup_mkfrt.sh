@@ -31,11 +31,9 @@ echo -e "$MSGCOL Removing unnecessary packages from Lubuntu $ENDCOL"
 sudo apt-get remove -y lubuntu-desktop
 sudo apt-get purge -y ace-of-penguins abiword gnumeric
 
-# LibreOffice 4.1 (only that version in PPA)
-# << It should be noted that this ppa will only produce updates for the 4.1 series >>
-# http://askubuntu.com/questions/252612/how-do-i-install-libreoffice-4
-echo -e "$MSGCOL Installing LibreOffice 4.1 (PPA) $ENDCOL"
-sudo add-apt-repository -y ppa:libreoffice/libreoffice-4-1
+# LibreOffice
+echo -e "$MSGCOL Installing LibreOffice (PPA) $ENDCOL"
+sudo add-apt-repository -y ppa:libreoffice/ppa
 sudo apt-get update -qq
 sudo apt-get install -y libreoffice
 
