@@ -54,16 +54,14 @@ source ~/setup/setup_desktop.sh
 echo -e "$MSGCOL Sputnik studio! $ENDCOL"
 source ~/setup/setup_studio.sh
 
-# Programming, Python
-echo -e "$MSGCOL PROGRAMMING. Python. $ENDCOL"
-sudo apt-get install -y python-pip python-dev
-
 # Programming, additional capabilities
 echo -e "$MSGCOL PROGRAMMING. Git environment. $ENDCOL"
 sudo apt-get install -y meld
 git config --global diff.tool meld
 git config --global --add difftool.prompt false
 git config --global --add color.ui true
+echo -e "$MSGCOL PROGRAMMING. Python additional modules. $ENDCOL"
+source ~/setup/setup_dev_python.sh
 echo -e "$MSGCOL PROGRAMMING. HTML5 development. $ENDCOL"
 source ~/setup/setup_dev_html5.sh
 echo -e "$MSGCOL PROGRAMMING. Node.js development. $ENDCOL"
