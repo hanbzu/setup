@@ -87,6 +87,18 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 echo -e "$MSGCOL GIS $ENDCOL"
 source ~/setup/setup_gis.sh
 
+# Install 'Caffeine' which prevents the OS from suspending while watching videos
+echo -e "$MSGCOL APP: Caffeine $ENDCOL"
+# Saucy repo not working
+#sudo add-apt-repository -y ppa:caffeine-developers/caffeine-dev
+#sudo apt-get update -qq
+#sudo apt-get install -y caffeine
+cd /tmp
+wget -c https://launchpad.net/caffeine/2.4/2.4.1/+download/caffeine_2.4.1%2B419%7Eoneiric1_all.deb -O caffeine.deb
+sudo dpkg -i /tmp/caffeine.deb
+sudo apt-get install -f -y
+rm /tmp/caffeine.deb
+
 # CLI improvements
 echo -e "$MSGCOL Command line improvements $ENDCOL"
 # Useful for viewing small directory structures

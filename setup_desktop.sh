@@ -42,22 +42,10 @@ else
   CHROME_FILE=google-chrome-stable_current_i386.deb
 fi
 wget https://dl.google.com/linux/direct/$CHROME_FILE
-sudo dpkg -i -y $CHROME_FILE
+sudo dpkg -i $CHROME_FILE
 # Fix errors encountered during install
 sudo apt-get -f -y install
 rm /tmp/$CHROME_FILE
-
-# Install 'Caffeine' which prevents the OS from suspending while watching videos
-echo -e "$MSGCOL APP: Caffeine $ENDCOL"
-# Saucy repo not working
-#sudo add-apt-repository -y ppa:caffeine-developers/caffeine-dev
-#sudo apt-get update -qq
-#sudo apt-get install -y caffeine
-cd /tmp
-wget -c https://launchpad.net/caffeine/2.4/2.4.1/+download/caffeine_2.4.1%2B419%7Eoneiric1_all.deb -O caffeine.deb
-sudo dpkg -i /tmp/caffeine.deb
-sudo apt-get install -f -y
-rm /tmp/caffeine.deb
 
 # Filezilla is useful for non automated FTP connections
 echo -e "$MSGCOL APP: Filezilla $ENDCOL"
@@ -74,6 +62,6 @@ sudo apt-get install -y gimp gimp-plugin-registry gimp-gmic
 
 # Inconsolata: Useful font for coding and console
 echo -e "$MSGCOL Inconsolata font $ENDCOL"
-sudo apt-get install -y ttf-inconsolata
+sudo apt-get install -y fonts-inconsolata
 
 echo -e "$MSGCOL --> Desktop apps, done. $ENDCOL"
