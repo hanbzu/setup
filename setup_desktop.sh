@@ -26,7 +26,9 @@ echo -e "$MSGCOL APP: VirtualBox $ENDCOL"
 sudo apt-get install -y dkms
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 CODENAME=`lsb_release --codename | cut -f2` # Ubuntu codename
-echo "deb http://download.virtualbox.org/virtualbox/debian $CODENAME contrib" | sudo tee -a /etc/apt/sources.list.d/virtualbox.list
+#echo "deb http://download.virtualbox.org/virtualbox/debian $CODENAME contrib" | sudo tee -a /etc/apt/sources.list.d/virtualbox.list
+# For now, 14.04 'trusty' not working. Waiting until they update their repo. Using saucy temporarily.
+echo "deb http://download.virtualbox.org/virtualbox/debian saucy contrib" | sudo tee -a /etc/apt/sources.list.d/virtualbox.list
 sudo apt-get update -qq
 sudo apt-get install -y virtualbox-4.3
 

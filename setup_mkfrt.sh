@@ -60,8 +60,7 @@ echo "dropbox start -i" >> ~/.config/lxsession/Lubuntu/autostart
 #cp  ~/.config/lxsession/Lubuntu/desktop.conf  ~/.config/lxsession/Lubuntu/desktop.conf.bak
 #sed -i ‘s/disable_autostart=config-only/disable_autostart=no/g’ ~/.config/lxsession/Lubuntu/desktop.conf
 
-# Add Caffeine to autostart
-
 # Enable laptop mode
 cp  ~/.config/lxsession/Lubuntu/desktop.conf  ~/.config/lxsession/Lubuntu/desktop.conf.bak
-sed -i ‘s/laptop_mode=no/laptop_mode=yes/g’ ~/.config/lxsession/Lubuntu/desktop.conf
+sed -i 's/laptop_mode=no/laptop_mode=yes/g' ~/.config/lxsession/Lubuntu/desktop.conf
+
