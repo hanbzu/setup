@@ -42,7 +42,7 @@ else
   CHROME_FILE=google-chrome-stable_current_i386.deb
 fi
 wget https://dl.google.com/linux/direct/$CHROME_FILE
-sudo dpkg -i $CHROME_FILE
+sudo dpkg -i $CHROME_FILE -y
 # Fix errors encountered during install
 sudo apt-get -f -y install
 rm /tmp/$CHROME_FILE
