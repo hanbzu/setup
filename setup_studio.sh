@@ -42,7 +42,7 @@ then
 	# RAW image support
 	sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
 	# Screencasting applications
-  sudo apt-get install recordmydesktop
-  sudo apt-get install simplescreenrecorder
+  sudo apt-get install -y recordmydesktop
+  sudo apt-get install -y simplescreenrecorder
 
 fi
