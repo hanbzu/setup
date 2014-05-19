@@ -11,10 +11,6 @@ read -p "Are you sure? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	# REMOVING PACKAGES WE WONT USE
-	# We will not use Shotwell
-	sudo apt-get remove -y --purge shotwell
-
 	# ADDING REPOSITORIES
 	# Darktable
 	sudo add-apt-repository -y ppa:pmjdebruijn/darktable-release-plus
