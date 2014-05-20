@@ -14,8 +14,8 @@ sudo apt-get install -y openjdk-7-jdk
 # remove sbt:>  sudo apt-get purge sbt.
 SBT_VERSION=0.13.2
 cd ~/Downloads
-wget http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt//$SBT_VERSION/sbt.deb
-sudo dpkg -i sbt.deb
+wget http://dl.bintray.com/sbt/debian/sbt-$SBT_VERSION.deb
+sudo dpkg -i sbt-$SBT_VERSION.deb
 sudo apt-get update -qq
 sudo apt-get install -y sbt
 
