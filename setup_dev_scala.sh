@@ -48,7 +48,8 @@ else
   # 32 bit Linux
   curl http://downloads.typesafe.com/scalaide-pack/3.0.4.vfinal-211-20140421/scala-SDK-3.0.4-2.11-2.11-linux.gtk.x86.tar.gz | sudo tar -xz
 fi
-sudo wget https://pbs.twimg.com/profile_images/1079285671/twitter.png -O icon.png
+# ScalaIde icon
+sudo wget https://lh3.googleusercontent.com/-OygjFJlNgQQ/AAAAAAAAAAI/AAAAAAAAAFQ/FPtP5KKkWEc/photo.jpg -O icon.png
 sudo ln -s /opt/scalaide/eclipse/eclipse /usr/local/bin/scalaide
 sudo cp ~/setup/assets/scalaide.desktop /usr/share/applications/
 
@@ -76,7 +77,7 @@ sudo ln -s ~/bin/play-$PLAY_VERSION/play /usr/local/bin/play
 mkdir -p ~/bin
 cd ~/bin
 ACTIVATOR_VERSION=1.1.3
-curl http://downloads.typesafe.com/typesafe-activator/1.0.10/typesafe-activator-$ACTIVATOR_VERSION.zip -o tmp.zip
+curl http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip -o tmp.zip
 unzip tmp.zip
 rm tmp.zip
 sudo ln -s ~/bin/activator-$ACTIVATOR_VERSION/activator /usr/local/bin/activator
