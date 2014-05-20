@@ -13,7 +13,7 @@ MSGCOL="\033[37;44m"
 ENDCOL="\033[0m"
 
 # Basic for automatic installs
-echo -e "$MSGCOL Preparing for *SPUTNIK* UBUNTU SAUCY setup $ENDCOL"
+echo -e "$MSGCOL Preparing for *SPUTNIK* UBUNTU TRUSTY setup $ENDCOL"
 sudo apt-get install -y git
 sudo apt-get install -y curl
 sudo apt-get update -qq
@@ -89,15 +89,10 @@ source ~/setup/setup_gis.sh
 
 # Install 'Caffeine' which prevents the OS from suspending while watching videos
 echo -e "$MSGCOL APP: Caffeine $ENDCOL"
-# Saucy repo not working
-#sudo add-apt-repository -y ppa:caffeine-developers/caffeine-dev
-#sudo apt-get update -qq
-#sudo apt-get install -y caffeine
-cd /tmp
-wget -c https://launchpad.net/caffeine/2.4/2.4.1/+download/caffeine_2.4.1%2B419%7Eoneiric1_all.deb -O caffeine.deb
+cd ~/Downloads
+wget -c https://launchpad.net/~caffeine-developers/+archive/ppa/+files/caffeine_2.7_all.deb -O caffeine.deb
 sudo dpkg -i /tmp/caffeine.deb
 sudo apt-get install -f -y
-rm /tmp/caffeine.deb
 
 # CLI improvements
 echo -e "$MSGCOL Command line improvements $ENDCOL"
