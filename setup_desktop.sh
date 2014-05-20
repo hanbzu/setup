@@ -2,7 +2,6 @@
 # --------------------------------------------
 # CAUTION: In case you use this script make
 # sure you understand the commands.
-# THESE COMMANDS APPLY TO UBUNTU SAUCY (13.10)
 # --------------------------------------------
 
 # Ubuntu codename and machine type

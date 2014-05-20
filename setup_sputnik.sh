@@ -23,7 +23,7 @@ sudo apt-get upgrade -y
 gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', 'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
 
 # Graphic capabilities benchmarking
-sudo apt-get glmark2
+sudo apt-get install -y glmark2
 
 # Spell cheking and dictionaries for EU, CA, EN-UK, DE, ES, FR
 # More info at: http://packages.ubuntu.com/lucid/hunspell-dictionary
