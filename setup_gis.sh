@@ -15,6 +15,8 @@ echo "deb     http://qgis.org/debian $CODENAME main" | sudo tee -a /etc/apt/sour
 echo "deb-src http://qgis.org/debian $CODENAME main" | sudo tee -a /etc/apt/sources.list
 sudo apt-get update -qq
 sudo apt-get install qgis python-qgis qgis-plugin-grass -y --force-yes
+gpg --keyserver keyserver.ubuntu.com --recv 47765B75
+gpg --export --armor 47765B75 | sudo apt-key add -
 
 # GDAL
 sudo apt-get install gdal-bin -y
