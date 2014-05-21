@@ -30,4 +30,4 @@ sudo ./install-tilemill.sh
 sudo rm install-tilemill.sh
 
 # TOPOJSON
-npm install -g topojson
+sudo npm install -g topojson
