@@ -36,3 +36,6 @@ sudo apt-get install -y racket
 echo -e "$MSGCOL RVM and Ruby version 1.9.3 $ENDCOL"
 cd ~
 curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
+
+# Install Jekyll (Ruby gem for static website creation)
+sudo gem install jekyll --no-rdoc --no-ri
