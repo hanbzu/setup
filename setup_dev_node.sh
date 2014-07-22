@@ -2,6 +2,9 @@
 # Basic Node.js development in a remote virtual machine.
 # Emacs is used as editor.
 
+# Node version to install and use
+NODE_VER="v0.10.29"
+
 # Color messages
 MSGCOL="\033[37;44m"
 ENDCOL="\033[0m"
@@ -14,8 +17,9 @@ sudo apt-get install -y curl
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 # Load nvm and install latest production node
 source $HOME/.nvm/nvm.sh
-nvm install v0.10.28
-nvm use v0.10.28
+nvm install $NODE_VER
+nvm use $NODE_VER
+nvm alias default $NODE_VER
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
