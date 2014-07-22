@@ -31,6 +31,10 @@ mkdir -p ~/.sbt/plugins
 touch    ~/.sbt/plugins/plugins.sbt 
 echo "addSbtPlugin(\"org.ensime\" % \"ensime-sbt-cmd\" % \"0.1.2\")" >> ~/.sbt/plugins/plugins.sbt
 
+# Manual installation of Coffeescript syntax highlighting
+cd ~/.config/sublime-text-2/Packages
+git clone git://github.com/jashkenas/coffee-script-tmbundle CoffeeScript
+
 # Manual installation of Gist plug-in
 cd ~/.config/sublime-text-2/Packages
 git clone git://github.com/condemil/Gist
