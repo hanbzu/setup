@@ -12,22 +12,21 @@ sudo apt-get install -y openjdk-7-jdk
 
 # SBT
 # remove sbt:>  sudo apt-get purge sbt.
-SBT_VERSION=0.13.2
+SBT_VERSION=0.13.5
 cd ~/Downloads
 wget http://dl.bintray.com/sbt/debian/sbt-$SBT_VERSION.deb
 sudo dpkg -i sbt-$SBT_VERSION.deb
-sudo apt-get update -qq
-sudo apt-get install -y sbt
+rm ~/Downloads/sbt-$SBT_VERSION.deb
 
 # Scala-lang
 # http://downloads.typesafe.com/scala/2.11.0/scala-2.11.0.deb
 # But it changes according to version
-SCALA_VERSION=2.11.0
+SCALA_VERSION=2.11.2
 sudo apt-get remove scala-library scala
+cd ~/Downloads
 wget http://downloads.typesafe.com/scala/$SCALA_VERSION/scala-$SCALA_VERSION.deb
 sudo dpkg -i scala-$SCALA_VERSION.deb
-sudo apt-get update -qq
-sudo apt-get install -y scala
+rm ~/Downloads/scala-$SCALA_VERSION.deb
 
 # eclipse SBT plugin
 SBT_MAJOR_VERSION=0.13
@@ -53,31 +52,12 @@ sudo wget https://lh3.googleusercontent.com/-OygjFJlNgQQ/AAAAAAAAAAI/AAAAAAAAAFQ
 sudo ln -s /opt/scalaide/eclipse/eclipse /usr/local/bin/scalaide
 sudo cp ~/setup/assets/scalaide.desktop /usr/share/applications/
 
-# Temporary workaround for Scala REPL
-#mkdir -p ~/bin/scala_workaround
-#cd ~/bin/scala_workaround
-#echo "#\!/bin/bash" >> scala.sh
-#echo "sbt console" >> scala.sh
-#chmod +x scala.sh
-#sudo ln -s ~/bin/scala_workaround/scala.sh /usr/local/bin/scala
-
-# Play Framework
-# I'm using version 2.2.2 -- Change according to times
-# Running play writes some files to directories within the archive,
-# so don’t install to /opt, /usr/local or anywhere else you’d need special permission to write to.
-mkdir -p ~/bin
-cd ~/bin
-PLAY_VERSION=2.2.2
-curl http://downloads.typesafe.com/play/$PLAY_VERSION/play-$PLAY_VERSION.zip -o tmp.zip
-unzip tmp.zip
-rm tmp.zip
-sudo ln -s ~/bin/play-$PLAY_VERSION/play /usr/local/bin/play
-
 # Typesafe activator
 mkdir -p ~/bin
 cd ~/bin
-ACTIVATOR_VERSION=1.1.3
-curl http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip -o tmp.zip
+ACTIVATOR_VERSION=1.2.7
+curl -L http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip -o tmp.zip
 unzip tmp.zip
 rm tmp.zip
 sudo ln -s ~/bin/activator-$ACTIVATOR_VERSION/activator /usr/local/bin/activator
+
