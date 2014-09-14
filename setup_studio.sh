@@ -29,9 +29,7 @@ then
 	# We will use Darktable instead of Shotwell
 	sudo apt-get install -y darktable
 	# Raster & vector image editing: Gimp and Inkscape
-	sudo apt-get install -y gimp
-	sudo apt-get install -y gimp-plugin-registry
-	sudo apt-get install -y gimp-gmic
+	sudo apt-get install -y gimp gimp-plugin-registry gimp-gmic
 	sudo apt-get install -y inkscape
 	# Pitivi video editor
 	sudo apt-get install -y pitivi
@@ -42,7 +40,8 @@ then
 	# RAW image support
 	sudo apt-get install -y ufraw gimp-ufraw ufraw-batch
 	# Screencasting applications
-  sudo apt-get install -y recordmydesktop
-  sudo apt-get install -y simplescreenrecorder
+  sudo apt-get install -y recordmydesktop simplescreenrecorder
+  # Command line video manipulation
+  sudo apt-get install -y libav-tools transcode
 
 fi
