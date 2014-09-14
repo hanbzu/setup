@@ -42,6 +42,6 @@ then
 	# Screencasting applications
   sudo apt-get install -y recordmydesktop simplescreenrecorder
   # Command line video manipulation
-  sudo apt-get install -y libav-tools transcode
+  sudo apt-get install -y mplayer libav-tools transcode
 
 fi
