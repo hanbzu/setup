@@ -54,6 +54,11 @@ source ~/setup/setup_desktop.sh
 echo -e "$MSGCOL Sputnik studio! $ENDCOL"
 source ~/setup/setup_studio.sh
 
+# Wireshark network analyser
+sudo apt-get install wireshark
+sudo dpkg-reconfigure wireshark-common 
+sudo usermod -a -G wireshark $USER
+
 # Programming, additional capabilities
 echo -e "$MSGCOL PROGRAMMING. Git environment. $ENDCOL"
 sudo apt-get install -y meld
