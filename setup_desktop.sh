@@ -50,6 +50,11 @@ rm /tmp/$CHROME_FILE
 echo -e "$MSGCOL APP: Filezilla $ENDCOL"
 sudo apt-get install -y filezilla
 
+# Batch image editing in Nautilus
+sudo add-apt-repository ppa:atareao/nautilus-extensions
+sudo apt-get update -qq
+sudo apt-get install -y nautilus-image-tools
+
 # Useful to manage local files and do cleanups
 echo -e "$MSGCOL APP: FSlint $ENDCOL"
 sudo apt-get install -y fslint
