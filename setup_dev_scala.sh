@@ -52,6 +52,18 @@ sudo wget https://lh3.googleusercontent.com/-OygjFJlNgQQ/AAAAAAAAAAI/AAAAAAAAAFQ
 sudo ln -s /opt/scalaide/eclipse/eclipse /usr/local/bin/scalaide
 sudo cp ~/setup/assets/scalaide.desktop /usr/share/applications/
 
+# Install IntelliJ IDEA from JetBrains
+IDEA_VER=14.0.1
+mkdir -p ~/Downloads/idea_install
+cd ~/Downloads/idea_install
+curl http://download-cf.jetbrains.com/idea/ideaIC-${IDEA_VER}.tar.gz | tar -xz
+sudo mkdir -p /opt/idea/
+cd /opt/idea
+sudo mv ~/Downloads/idea_install/idea*/* .
+sudo wget http://drslash.com/wp-content/uploads/2014/07/Intellij-Idea.png -O icon.png
+sudo ln -s /opt/idea/bin/idea.sh /usr/local/bin/idea
+sudo cp ~/setup/assets/idea.desktop /usr/share/applications/
+
 # Typesafe activator
 mkdir -p ~/bin
 cd ~/bin

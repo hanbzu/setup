@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=IntelliJ IDEA
+Comment=Java and Scala IDE by JetBrains
+Icon=/opt/idea/icon.png
+Exec=env UBUNTU_MENUPROXY= idea
+Terminal=false
+Categories=Development;IDE;Java;Scala;
