@@ -52,6 +52,16 @@ sudo wget https://lh3.googleusercontent.com/-OygjFJlNgQQ/AAAAAAAAAAI/AAAAAAAAAFQ
 sudo ln -s /opt/scalaide/eclipse/eclipse /usr/local/bin/scalaide
 sudo cp ~/setup/assets/scalaide.desktop /usr/share/applications/
 
+# TuxJDK https://code.google.com/p/tuxjdk/ is an alternative JVM for Linux
+# It is made for Linux developers and I download it because it solves some font issues with IntelliJ IDEA
+sudo mkdir -p /usr/lib/jvm
+cd /usr/lib/jvm
+TUX_JVM_VER=jdk-8u25-tuxjdk-b01
+URL=https://googledrive.com/host/0B68yuEpDuq6waUl5UjNTUWRlYTQ/${TUX_JVM_VER}.tar.xz
+echo ${URL}
+curl -L ${URL} | sudo tar -xJ
+# The JDK will be in /usr/lib/jvm/${TUX_JVM_VER}
+
 # Install IntelliJ IDEA from JetBrains
 IDEA_VER=14.0.1
 mkdir -p ~/Downloads/idea_install
@@ -63,6 +73,14 @@ sudo mv ~/Downloads/idea_install/idea*/* .
 sudo wget http://drslash.com/wp-content/uploads/2014/07/Intellij-Idea.png -O icon.png
 sudo ln -s /opt/idea/bin/idea.sh /usr/local/bin/idea
 sudo cp ~/setup/assets/idea.desktop /usr/share/applications/
+# Once everything is setup, a scala plugin needs to be added through the IDEA interface.
+# Additionally, if you want to correct the poor appearance under Ubuntu Linux,
+# Once TuxJDK has been installed in /usr/lib/jvm you need to change a line in /opt/idea/bin/idea.sh:
+# FROM this:
+# eval "$JDK/bin/java" $ALL_JVM_ARGS -Djb.restart.code=88 $MAIN_CLASS_NAME "$@"
+# TO this:
+# eval "/usr/lib/jvm/jdk-8u25-tuxjdk-b01/bin/java" $ALL_JVM_ARGS -Djb.restart.code=88 $MAIN_CLASS_NAME "$@"
+# Please update the TuxJDK version accordingly
 
 # Typesafe activator
 mkdir -p ~/bin
