@@ -12,6 +12,10 @@ MACHINE_TYPE=`uname -m`
 MSGCOL="\033[37;44m"
 ENDCOL="\033[0m"
 
+# Virtualbox and Vagrant
+echo -e "$MSGCOL VIRTUAL MACHINES. VirtualBox and Vagrant. $ENDCOL"
+source ~/setup/setup_dev_scala.sh
+
 # Skype. We need to add Canonical partner repositories
 echo -e "$MSGCOL APP: Skype $ENDCOL"
 sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ $CODENAME partner' >> /etc/apt/sources.list.d/canonical_partner.list"
@@ -19,15 +23,6 @@ sudo apt-get update -qq
 sudo apt-get install -y skype
 # If there's any sound issue, read this:
 # http://linuxg.net/how-to-fix-the-skype-sound-issue-on-ubuntu-13-10-saucy-salamander/
-
-# Virtualbox
-echo -e "$MSGCOL APP: VirtualBox $ENDCOL"
-sudo apt-get install -y dkms
-wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-CODENAME=`lsb_release --codename | cut -f2` # Ubuntu codename
-echo "deb http://download.virtualbox.org/virtualbox/debian $CODENAME contrib" | sudo tee -a /etc/apt/sources.list.d/virtualbox.list
-sudo apt-get update -qq
-sudo apt-get install -y virtualbox-4.3
 
 # For now, we'll be using Chrome instead of Firefox
 echo -e "$MSGCOL APP: Chrome $ENDCOL"
