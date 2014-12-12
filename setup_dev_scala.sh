@@ -63,7 +63,7 @@ curl -L ${URL} | sudo tar -xJ
 # The JDK will be in /usr/lib/jvm/${TUX_JVM_VER}
 
 # Install IntelliJ IDEA from JetBrains
-IDEA_VER=14.0.1
+IDEA_VER=14.0.2
 mkdir -p ~/Downloads/idea_install
 cd ~/Downloads/idea_install
 curl http://download-cf.jetbrains.com/idea/ideaIC-${IDEA_VER}.tar.gz | tar -xz
