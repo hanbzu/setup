@@ -71,6 +71,8 @@ echo -e "$MSGCOL PROGRAMMING. HTML5 development. $ENDCOL"
 source ~/setup/setup_dev_html5.sh
 echo -e "$MSGCOL PROGRAMMING. Node.js development. $ENDCOL"
 source ~/setup/setup_dev_node.sh
+echo -e "$MSGCOL PROGRAMMING. MongoDB database. $ENDCOL"
+source ~/setup/setup_dev_mongo.sh
 echo -e "$MSGCOL PROGRAMMING. Programming Languages set (SML, Racket, Ruby). $ENDCOL"
 source ~/setup/setup_dev_proglangs.sh
 echo -e "$MSGCOL PROGRAMMING. R and R Studio. $ENDCOL"
