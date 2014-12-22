@@ -12,7 +12,7 @@ sudo apt-get install -y openjdk-7-jdk
 
 # SBT
 # remove sbt:>  sudo apt-get purge sbt.
-SBT_VERSION=0.13.5
+SBT_VERSION=0.13.7
 cd ~/Downloads
 wget http://dl.bintray.com/sbt/debian/sbt-$SBT_VERSION.deb
 sudo dpkg -i sbt-$SBT_VERSION.deb
@@ -21,7 +21,7 @@ rm ~/Downloads/sbt-$SBT_VERSION.deb
 # Scala-lang
 # http://downloads.typesafe.com/scala/2.11.0/scala-2.11.0.deb
 # But it changes according to version
-SCALA_VERSION=2.11.2
+SCALA_VERSION=2.11.4
 sudo apt-get remove scala-library scala
 cd ~/Downloads
 wget http://downloads.typesafe.com/scala/$SCALA_VERSION/scala-$SCALA_VERSION.deb
