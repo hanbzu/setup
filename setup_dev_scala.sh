@@ -73,8 +73,9 @@ tar -zxvf ${TUX_JVM_VER}.tar.gz
 sudo mv ${TUX_JVM_VER} /usr/lib/jvm
 rm ${TUX_JVM_VER}.tar.gz
 
+
 # Install IntelliJ IDEA from JetBrains
-IDEA_VER=14.1.4
+IDEA_VER=15.0.2
 mkdir -p ~/Downloads/idea_install
 cd ~/Downloads/idea_install
 curl http://download-cf.jetbrains.com/idea/ideaIC-${IDEA_VER}.tar.gz | tar -xz
@@ -85,8 +86,10 @@ sudo wget http://drslash.com/wp-content/uploads/2014/07/Intellij-Idea.png -O ico
 sudo ln -s /opt/idea/bin/idea.sh /usr/local/bin/idea
 sudo cp ~/setup/assets/idea.desktop /usr/share/applications/
 # Once everything is setup, a scala plugin needs to be added through the IDEA interface.
-# Additionally, if you want to correct the poor appearance under Ubuntu Linux,
-# Follow the instructions here:
+# Additionally, this patch is applied to correct poor appearance under Ubuntu Linux:
+sudo mv /opt/idea/bin/idea.sh /opt/idea/bin/idea_original.sh 
+sudo cp ~/setup/assets/idea.sh /opt/idea/bin/
+# Based on the instructions here:
 # http://askubuntu.com/questions/454361/font-in-intellij-idea-on-ubuntu-14-04
 
 # Typesafe activator
@@ -96,5 +99,5 @@ ACTIVATOR_VERSION=1.3.6
 curl -L http://downloads.typesafe.com/typesafe-activator/$ACTIVATOR_VERSION/typesafe-activator-$ACTIVATOR_VERSION.zip -o tmp.zip
 unzip tmp.zip
 rm tmp.zip
-sudo ln -s ~/bin/activator-$ACTIVATOR_VERSION/activator /usr/local/bin/activator
+sudo ln -s ~/bin/activator-dist-$ACTIVATOR_VERSION/activator /usr/local/bin/activator
 
