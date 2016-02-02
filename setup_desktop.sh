@@ -13,8 +13,8 @@ MSGCOL="\033[37;44m"
 ENDCOL="\033[0m"
 
 # Virtualbox and Vagrant
-echo -e "$MSGCOL VIRTUAL MACHINES. VirtualBox and Vagrant. $ENDCOL"
-source ~/setup/setup_dev_scala.sh
+#echo -e "$MSGCOL VIRTUAL MACHINES. VirtualBox and Vagrant. $ENDCOL"
+#source ~/setup/setup_dev_scala.sh
 
 # Skype. We need to add Canonical partner repositories
 echo -e "$MSGCOL APP: Skype $ENDCOL"
